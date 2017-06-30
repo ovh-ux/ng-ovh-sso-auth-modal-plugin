@@ -1,0 +1,85 @@
+<div id="sso-modal">
+    <div class="modal-header" data-ng-if="!ssoAuthModalCtrl.loaders.trads">
+        <h3 class="modal-title">
+            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+            <span data-translate="sso_modal_title"></span>
+        </h3>
+    </div>
+    <div class="modal-body" data-ng-if="ssoAuthModalCtrl.loaders.init" data-translate="sso_modal_loading"></div>
+    <div class="modal-body" data-ng-if="!ssoAuthModalCtrl.loaders.init">
+        <div class="row">
+            <div data-ng-if="ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_DISCONNECTED' || ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'"
+                data-ng-class="{'col-md-12 span12': ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_DISCONNECTED', 'col-md-6 span6': ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER' }">
+                <p data-translate="sso_modal_user_title"></p>
+                <div class="panel panel-default" data-ng-class="{'panel-disabled': ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'}">
+                    <div class="panel-body">
+
+                        <div class="sso-modal-account-badge-ctnr">
+                            <div class="sso-modal-account-badge" aria-hidden="true">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                        </div>
+
+                        <div class="sso-modal-account-infos-ctnr">
+                            <div class="sso-modal-account-infos">
+                                <strong data-ng-bind="ssoAuthModalCtrl.data.user.firstname + ' ' + ssoAuthModalCtrl.data.user.name"></strong><br>
+                                <span data-ng-bind="ssoAuthModalCtrl.data.user.email"></span><br>
+                                <span data-ng-bind="ssoAuthModalCtrl.data.user.nichandle"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div data-ng-if="ssoAuthModalCtrl.data.mode === 'DISCONNECTED_TO_CONNECTED' || ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'"
+                data-ng-class="{'col-md-12 span12': ssoAuthModalCtrl.data.mode === 'DISCONNECTED_TO_CONNECTED', 'col-md-6 span6': ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER' }">
+                <p data-ng-class="{'bold': ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'}" data-translate="sso_modal_currentuser_title"></p>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="sso-modal-account-badge-ctnr">
+                            <div class="sso-modal-account-badge" aria-hidden="true">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                        </div>
+
+                        <div class="sso-modal-account-infos-ctnr">
+                            <div class="sso-modal-account-infos">
+                                <strong data-ng-bind="ssoAuthModalCtrl.data.currentUser.firstname + ' ' + ssoAuthModalCtrl.data.currentUser.name"></strong><br>
+                                <span data-ng-bind="ssoAuthModalCtrl.data.currentUser.email"></span><br>
+                                <span data-ng-bind="ssoAuthModalCtrl.data.currentUser.nichandle"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p data-ng-if="ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_DISCONNECTED'" class="bold" data-translate="sso_modal_disconnected"></p>
+
+        <p data-ng-if="ssoAuthModalCtrl.data.mode === 'DISCONNECTED_TO_CONNECTED' || ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'" class="bold" data-translate="sso_modal_what"></p>
+
+    </div>
+
+    <div class="modal-footer clearfix" data-ng-if="!ssoAuthModalCtrl.loaders.init">
+        <div data-ng-if="ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_DISCONNECTED'">
+            <button type="button" class="btn btn-primary pull-right" autofocus="autofocus"
+                data-ng-click="ssoAuthModalCtrl.logout()"
+                data-ng-disabled="ssoAuthModalCtrl.loaders.action"
+                data-translate="sso_modal_action_logout"></button>
+        </div>
+        <div data-ng-if="ssoAuthModalCtrl.data.mode === 'DISCONNECTED_TO_CONNECTED' || ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'">
+            <button type="button" class="btn btn-primary pull-right" autofocus="autofocus"
+                data-ng-click="ssoAuthModalCtrl.reload()"
+                data-ng-disabled="ssoAuthModalCtrl.loaders.action"
+                data-translate="sso_modal_action_reload"
+                data-translate-values="{ name: ssoAuthModalCtrl.data.currentUser.firstname + ' ' + ssoAuthModalCtrl.data.currentUser.name }"></button>
+            <button type="button" class="btn btn-default pull-left"
+                data-ng-click="ssoAuthModalCtrl.logout()"
+                data-ng-disabled="ssoAuthModalCtrl.loaders.action"
+                data-translate="sso_modal_action_logout"></button>
+        </div>
+    </div>
+
+</div>
