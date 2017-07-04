@@ -1,3 +1,5 @@
+angular.module("ovh-angular-sso-auth-modal-plugin", ["pascalprecht.translate", "ui.bootstrap", "ovh-angular-sso-auth"]);
+
 /**
  * @ngdoc controller
  * @name ovh-angular-sso-auth-modal-plugin.SsoAuthModalController
@@ -73,8 +75,6 @@ angular.module("ovh-angular-sso-auth-modal-plugin").config(["$provide", function
         return $delegate;
     }]);
 }]);
-
-angular.module("ovh-angular-sso-auth-modal-plugin", ["pascalprecht.translate", "ui.bootstrap", "ovh-angular-sso-auth"]);
 
 /**
  * @ngdoc service
@@ -158,7 +158,7 @@ angular.module("ovh-angular-sso-auth-modal-plugin").provider("ssoAuthModalPlugin
 
 });
 
-angular.module('ssoAuthModalPlugin').run(['$templateCache', function($templateCache) {
+angular.module('ovh-angular-sso-auth-modal-plugin').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('src/modal/ovh-angular-sso-auth-modal-plugin.html',

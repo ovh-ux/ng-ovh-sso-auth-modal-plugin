@@ -16,7 +16,7 @@ module.exports = function (grunt) {
         srcdir: "src",
         builddir: ".work/.tmp",
         name: grunt.file.readJSON("package.json").name || "ovh-angular-sso-auth-modal-plugin",   // module name
-        moduleName: "ssoAuthModalPlugin",
+        moduleName: "ovh-angular-sso-auth-modal-plugin",
 
         // Clean
         clean: {
