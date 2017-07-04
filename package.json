@@ -1,6 +1,6 @@
 {
   "name": "ovh-angular-sso-auth-modal-plugin",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "OVH SSO module - Modal plugin",
   "main": "./dist/ovh-angular-sso-auth-modal-plugin.min.js",
   "author": "OVH SAS",
