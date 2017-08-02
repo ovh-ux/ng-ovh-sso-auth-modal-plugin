@@ -138,7 +138,7 @@ angular.module("ovh-angular-sso-auth-modal-plugin").provider("ssoAuthModalPlugin
                     }
 
                     $uibModal.open({
-                        templateUrl: "src/modal/sso-auth-modal-plugin.html",
+                        templateUrl: "src/modal/ovh-angular-sso-auth-modal-plugin.html",
                         controller: "SsoAuthModalController",
                         controllerAs: "ssoAuthModalCtrl",
                         resolve: {
