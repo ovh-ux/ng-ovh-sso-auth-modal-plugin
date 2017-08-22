@@ -70,7 +70,8 @@ angular.module("ovh-angular-sso-auth-modal-plugin").provider("ssoAuthModalPlugin
                         },
                         size: modalDatas.mode === "DISCONNECTED_TO_CONNECTED" || modalDatas.mode === "CONNECTED_TO_OTHER" ? "lg" : undefined,
                         keyboard: false,
-                        backdrop: "static"
+                        backdrop: "static",
+                        windowClass: "sso-modal"
                     });
                 }
                 return deferredObj.promise;
