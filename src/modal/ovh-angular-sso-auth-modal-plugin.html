@@ -1,11 +1,16 @@
 <div id="sso-modal" class="oui-modal oui-modal_shadow">
-    <div class="oui-modal__header" data-ng-if="!ssoAuthModalCtrl.loaders.trads">
-        <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
+    <div class="oui-modal__header"></div>
+
+    <div class="oui-modal__body oui-modal__body_no-icon text-center" data-ng-if="ssoAuthModalCtrl.loaders.init">
+        <div class="oui-loader oui-loader_s">
+            <div class="oui-loader__container m-auto center-block">
+                <div class="oui-loader__image"></div>
+            </div>
+        </div>
+        <span data-ng-if="!ssoAuthModalCtrl.loaders.trads" data-translate="sso_modal_loading"></span>
     </div>
 
-    <div class="oui-modal__body oui-modal__body_no-icon" data-ng-if="ssoAuthModalCtrl.loaders.init" data-translate="sso_modal_loading"></div>
-
-    <div class="oui-modal__body oui-modal__body_no-icon" data-ng-if="!ssoAuthModalCtrl.loaders.init">
+    <div class="oui-modal__body oui-modal__body_no-icon" data-ng-if="!ssoAuthModalCtrl.loaders.init && !ssoAuthModalCtrl.loaders.trads">
         <h2 class="oui-modal__title" data-translate="sso_modal_title"></h2>
         <div class="row">
             <div data-ng-if="ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_DISCONNECTED' || ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_OTHER'"
@@ -63,7 +68,7 @@
         </strong>
     </div>
 
-    <div class="oui-modal__footer" data-ng-if="!ssoAuthModalCtrl.loaders.init">
+    <div class="oui-modal__footer" data-ng-if="!ssoAuthModalCtrl.loaders.init && !ssoAuthModalCtrl.loaders.trads">
         <button type="button" class="oui-button oui-button_primary" autofocus="autofocus"
                 data-ng-if="ssoAuthModalCtrl.data.mode === 'CONNECTED_TO_DISCONNECTED'"
                 data-ng-click="ssoAuthModalCtrl.logout()"
