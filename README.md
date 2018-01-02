@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/ovh-angular-sso-auth-modal-plugin.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-angular-sso-auth-modal-plugin/)
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh/ovh-angular-sso-auth-modal-plugin.svg)](https://travis-ci.org/ovh/ovh-angular-sso-auth-modal-plugin)
+[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh/ovh-angular-sso-auth-modal-plugin.svg)](https://travis-ci.org/ovh/ovh-angular-sso-auth-modal-plugin)
 
 Plugin for ovh-angular-sso-auth library.
 It overrides the ovh-angular-sso-auth's handleSwitchSession function,
