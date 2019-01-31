@@ -1,9 +1,3 @@
+dist
 node_modules
-.tmp
-.idea
-npm-debug.log
-bower_components
-.work
-test-reports/
-src/**/translations/*.json
-tools/keys/*
+tools
