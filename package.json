@@ -1,6 +1,6 @@
 {
   "name": "@ovh-ux/ng-ovh-sso-auth-modal-plugin",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "OVH SSO module - Modal plugin",
   "keywords": [
     "angular",
