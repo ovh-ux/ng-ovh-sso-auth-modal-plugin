@@ -809,6 +809,11 @@
     rollup-pluginutils "^2.3.3"
     slash "^2.0.0"
 
+"@ovh-ux/ng-ovh-sso-auth@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@ovh-ux/ng-ovh-sso-auth/-/ng-ovh-sso-auth-4.1.0.tgz#658c6eba11e8a4ab8162fe4242a93680230e48e9"
+  integrity sha512-dZm2ZGbhW3IhyTOWcCZ/0NJ5ZayoWEgGHRkDzN3LQH6nlwVv5mkatlaXzOc7HvcAop2W+S2LnOXJtbrqCucM9w==
+
 "@ovh-ux/rollup-plugin-less-tilde-importer@^1.0.0-beta.0":
   version "1.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/@ovh-ux/rollup-plugin-less-tilde-importer/-/rollup-plugin-less-tilde-importer-1.0.0-beta.0.tgz#eaf065c6e1fd039db0ddfb2f30955aec987e0c63"
